@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KanbanDemo.API", "KanbanDemo.Api\KanbanDemo.API.csproj", "{865B8529-6578-4C34-B26C-6946D9A6CADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanDemo.Core", "KanbanDemo.Core\KanbanDemo.Core.csproj", "{95AEA43A-1154-4EB2-8F07-009E8A3E671E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KanbanDemo.Core", "KanbanDemo.Core\KanbanDemo.Core.csproj", "{95AEA43A-1154-4EB2-8F07-009E8A3E671E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanDemo.Data", "KanbanDemo.Data\KanbanDemo.Data.csproj", "{EBDC606D-0CC1-4A30-A1F2-E2FDC826214C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{95AEA43A-1154-4EB2-8F07-009E8A3E671E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95AEA43A-1154-4EB2-8F07-009E8A3E671E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95AEA43A-1154-4EB2-8F07-009E8A3E671E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDC606D-0CC1-4A30-A1F2-E2FDC826214C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDC606D-0CC1-4A30-A1F2-E2FDC826214C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDC606D-0CC1-4A30-A1F2-E2FDC826214C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDC606D-0CC1-4A30-A1F2-E2FDC826214C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
