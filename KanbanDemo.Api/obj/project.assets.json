@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "KanbanDemo.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/KanbanDemo.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KanbanDemo.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "KanbanDemo.Core/1.0.0": {
+      "type": "project",
+      "path": "../KanbanDemo.Core/KanbanDemo.Core.csproj",
+      "msbuildProject": "../KanbanDemo.Core/KanbanDemo.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "KanbanDemo.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\A425049\\.nuget\\packages\\": {}
@@ -40,7 +59,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj": {
+              "projectPath": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
