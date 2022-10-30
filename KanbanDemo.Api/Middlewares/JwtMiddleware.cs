@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KanbanDemo.API.Middleware
+namespace KanbanDemo.API.Middlewares
 {
     public class JwtMiddleware
     {

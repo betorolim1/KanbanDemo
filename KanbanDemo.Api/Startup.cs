@@ -1,4 +1,4 @@
-using KanbanDemo.API.Middleware;
+using KanbanDemo.API.Middlewares;
 using KanbanDemo.Core.Infrastructure;
 using KanbanDemo.Data.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -80,6 +80,8 @@ namespace KanbanDemo.API
 
             services.AddHandlers();
             services.AddRepositories();
+
+            services.AddFilters();
 
             services.AddMvc();
         }

@@ -1,4 +1,5 @@
-﻿using KanbanDemo.Core.Domains.Cards.Repository;
+﻿using KanbanDemo.API.Filters;
+using KanbanDemo.Core.Domains.Cards.Repository;
 using KanbanDemo.Core.Handlers;
 using KanbanDemo.Core.Handlers.Interfaces;
 using KanbanDemo.Data.Repository;
@@ -17,6 +18,11 @@ namespace KanbanDemo.API
         public static void AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<ICardRepository, CardRepository>();
+        }
+
+        public static void AddFilters(this IServiceCollection services)
+        {
+            services.AddScoped<LogFilter>();
         }
     }
 }

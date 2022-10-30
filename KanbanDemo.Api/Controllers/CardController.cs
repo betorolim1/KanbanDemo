@@ -1,4 +1,5 @@
-﻿using KanbanDemo.Core.Commands;
+﻿using KanbanDemo.API.Filters;
+using KanbanDemo.Core.Commands;
 using KanbanDemo.Core.Handlers.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +20,7 @@ namespace KanbanDemo.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertCardsAsync([FromBody] InsertCardCommand command)
+        public async Task<IActionResult> InsertCardAsync([FromBody] InsertCardCommand command)
         {
             if (command is null)
                 return BadRequest("Command não pode ser nula");
@@ -32,8 +33,9 @@ namespace KanbanDemo.API.Controllers
             return Ok(result);
         }
 
+        [ServiceFilter(typeof(LogFilter))]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCardsAsync(Guid id, [FromBody] UpdateCardCommand command)
+        public async Task<IActionResult> UpdateCardAsync(Guid id, [FromBody] UpdateCardCommand command)
         {
             if (command is null)
                 return BadRequest("Command não pode ser nula");
@@ -51,8 +53,9 @@ namespace KanbanDemo.API.Controllers
             return Ok(result);
         }
 
+        [ServiceFilter(typeof(LogFilter))]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCardsAsync(Guid id)
+        public async Task<IActionResult> DeleteCardAsync(Guid id)
         {
             var result = await _cardHandler.DeleteCardAsync(id);
 

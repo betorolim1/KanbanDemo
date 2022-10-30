@@ -39,7 +39,7 @@ namespace KanbanDemo.Core.Domains.Cards
         private void ValidateMainFields()
         {
             if (string.IsNullOrWhiteSpace(Titulo))
-                AddNotification("Titulo inválido.");
+                AddNotification("Título inválido.");
 
             if (string.IsNullOrWhiteSpace(Conteudo))
                 AddNotification("Conteudo inválido.");
