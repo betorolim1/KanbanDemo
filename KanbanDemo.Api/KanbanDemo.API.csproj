@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.30" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\KanbanDemo.Core\KanbanDemo.Core.csproj" />
   </ItemGroup>
 
