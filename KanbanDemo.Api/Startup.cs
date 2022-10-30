@@ -1,9 +1,11 @@
 using KanbanDemo.API.Middleware;
 using KanbanDemo.Core.Infrastructure;
+using KanbanDemo.Data.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +30,8 @@ namespace KanbanDemo.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DatabaseContext>(opt => opt.UseInMemoryDatabase("Db"));
+
             var credentials = new Credentials();
             Configuration.Bind("Credentials", credentials);
             services.AddSingleton(credentials);
@@ -75,6 +79,7 @@ namespace KanbanDemo.API
             });
 
             services.AddHandlers();
+            services.AddRepositories();
 
             services.AddMvc();
         }

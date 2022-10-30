@@ -6,10 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.30" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.30" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\KanbanDemo.Core\KanbanDemo.Core.csproj" />
+    <ProjectReference Include="..\KanbanDemo.Data\KanbanDemo.Data.csproj" />
   </ItemGroup>
 
 </Project>

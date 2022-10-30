@@ -1,7 +1,6 @@
 ﻿using KanbanDemo.Core.Handlers.Interfaces;
 using KanbanDemo.Core.Requests;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace KanbanDemo.API.Controllers
 {
@@ -16,9 +15,9 @@ namespace KanbanDemo.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginCommand command)
+        public IActionResult Login([FromBody] LoginCommand command)
         {
-            var token = await _loginHandler.Login(command);
+            var token = _loginHandler.Login(command);
 
             if (token == null)
                 return Unauthorized();

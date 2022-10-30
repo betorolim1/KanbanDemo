@@ -5,7 +5,6 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace KanbanDemo.Core.Handlers
 {
@@ -20,7 +19,7 @@ namespace KanbanDemo.Core.Handlers
             _signingConfigurations = signingConfigurations;
         }
 
-        public async Task<string> Login(LoginCommand command)
+        public string Login(LoginCommand command)
         {
             if (command.Login != _credentials.Login || command.Password != _credentials.Password)
                 return null;
