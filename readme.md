@@ -11,17 +11,17 @@ No arquivo appsettings.json existem propriedades que devem ser preenchidas:
 
 # ENDPOINTS:
 
-(POST)      http://0.0.0.0:5000/login/
+(POST)      http:/5000/login/
 Retorna um token JWT que deve ser enviado no header de todas as outras requisições. HEADER: Authorization Bearer <TOKEN_JWT> 
 
-(GET)       http://0.0.0.0:5000/cards/
+(GET)       http:/5000/cards/
 Retorna uma lista de cards com todos os dados.
 
-(POST)      http://0.0.0.0:5000/cards/
+(POST)      http:/5000/cards/
 Insere um card e retorna a lista de cards com todos os dados. 
 
-(PUT)       http://0.0.0.0:5000/cards/{id}
+(PUT)       http:/5000/cards/{id}
 Altera o card informado no id e retorna este card alterado.
 
-(DELETE)    http://0.0.0.0:5000/cards/{id}
+(DELETE)    http:/5000/cards/{id}
 Remove o card informado no id e retorna uma lista de cards com todos os dados.
