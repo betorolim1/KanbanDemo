@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj",
         "projectName": "KanbanDemo.API",
-        "projectPath": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj",
-        "packagesPath": "C:\\Users\\A425049\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Api\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Api\\KanbanDemo.API.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\A425049\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,21 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nexus.it.volvo.net/repository/csbr/": {},
-          "http://nexus.it.volvo.net/repository/csla/": {},
-          "http://nexus.it.volvo.net/repository/drs-ms-core/": {},
-          "http://nexus.it.volvo.net/repository/nuget-drs-ms/": {},
-          "http://nuget.it.volvo.net/api/v2": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {},
-          "https://pkgs.dev.azure.com/itmsla/_packaging/itmsla/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj": {
-                "projectPath": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj"
+              "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj"
               }
             }
           }
@@ -74,21 +67,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj",
         "projectName": "KanbanDemo.Core",
-        "projectPath": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj",
-        "packagesPath": "C:\\Users\\A425049\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\A425049\\Desktop\\Pessoal\\kanban-demo\\KanbanDemo\\KanbanDemo.Core\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Core\\KanbanDemo.Core.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Estudo\\KanbanDemo\\KanbanDemo.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\A425049\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,14 +89,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nexus.it.volvo.net/repository/csbr/": {},
-          "http://nexus.it.volvo.net/repository/csla/": {},
-          "http://nexus.it.volvo.net/repository/drs-ms-core/": {},
-          "http://nexus.it.volvo.net/repository/nuget-drs-ms/": {},
-          "http://nuget.it.volvo.net/api/v2": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {},
-          "https://pkgs.dev.azure.com/itmsla/_packaging/itmsla/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -145,7 +131,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
