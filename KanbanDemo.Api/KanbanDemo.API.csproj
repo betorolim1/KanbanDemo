@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KanbanDemo.Core\KanbanDemo.Core.csproj" />
     <ProjectReference Include="..\KanbanDemo.Data\KanbanDemo.Data.csproj" />
+    <ProjectReference Include="..\KanbanDemo.Model\KanbanDemo.Model.csproj" />
   </ItemGroup>
 
 </Project>

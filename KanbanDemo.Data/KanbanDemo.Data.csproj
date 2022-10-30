@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KanbanDemo.Core\KanbanDemo.Core.csproj" />
-    <ProjectReference Include="..\KanbanDemo.Models\KanbanDemo.Model.csproj" />
     <ProjectReference Include="..\KanbanDemo.Model\KanbanDemo.Model.csproj" />
   </ItemGroup>
 

@@ -17,9 +17,14 @@ namespace KanbanDemo.Data.Repository
             _databaseContext = databaseContext;
         }
 
-        public IQueryable<Card> GetCards()
+        public IQueryable<Card> GetNotRemovedCards()
         {
-            return _databaseContext.Cards.AsQueryable();
+            return _databaseContext.Cards.Where(x => !x.IsRemoved);
+        }
+
+        public IQueryable<Card> GetNotRemovedCardById(Guid id)
+        {
+            return _databaseContext.Cards.Where(x => x.Id == id && !x.IsRemoved);
         }
 
         public IQueryable<Card> GetCardById(Guid id)
@@ -55,7 +60,10 @@ namespace KanbanDemo.Data.Repository
 
         public async Task DeleteCardAsync(Card card)
         {
-            _databaseContext.Remove(card);
+            card.IsRemoved = true;
+            _databaseContext.Update(card);
+
+            //_databaseContext.Remove(card); -- Caso fosse remover da base, mas estamos removendo logicamente.
             await _databaseContext.SaveChangesAsync();
         }
     }

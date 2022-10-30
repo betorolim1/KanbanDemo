@@ -44,7 +44,7 @@ namespace KanbanDemo.Core.Handlers
             if (!IsValid)
                 return null;
 
-            var cardOld = _cardRepository.GetCardById(command.Id).FirstOrDefault();
+            var cardOld = _cardRepository.GetNotRemovedCardById(command.Id).FirstOrDefault();
 
             if (cardOld is null)
                 return null;
@@ -70,7 +70,7 @@ namespace KanbanDemo.Core.Handlers
                 return null;
             }
 
-            var card = _cardRepository.GetCardById(id).FirstOrDefault();
+            var card = _cardRepository.GetNotRemovedCardById(id).FirstOrDefault();
 
             if (card is null)
                 return null;
@@ -92,7 +92,7 @@ namespace KanbanDemo.Core.Handlers
 
         private async Task<List<CardResult>> GetAllCardsAsync()
         {
-            var cards = _cardRepository.GetCards();
+            var cards = _cardRepository.GetNotRemovedCards();
 
             var cardResultList = cards.Select(x => new CardResult
             {

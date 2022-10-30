@@ -8,5 +8,6 @@ namespace KanbanDemo.Model.Models
         public string Titulo { get; set; }
         public string Conteudo { get; set; }
         public string Lista { get; set; }
+        public bool IsRemoved { get; set; }
     }
 }
