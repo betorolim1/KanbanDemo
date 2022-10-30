@@ -50,8 +50,10 @@ namespace KanbanDemo.Core.Domains.Cards
 
         public static class Factory
         {
-            public static CardDomain CreateCardToInsert(string titulo, string conteudo, string lista) => new CardDomain(titulo, conteudo, lista);
-            public static CardDomain CreateCardToUpdate(Guid id, string titulo, string conteudo, string lista) => new CardDomain(id, titulo, conteudo, lista);
+            public static CardDomain CreateCardToInsert(string titulo, string conteudo, string lista)
+                => new CardDomain(titulo, conteudo, lista);
+            public static CardDomain CreateCardToUpdate(Guid id, string titulo, string conteudo, string lista)
+                => new CardDomain(id, titulo, conteudo, lista);
         }
     }
 }

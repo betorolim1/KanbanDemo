@@ -44,7 +44,7 @@ namespace KanbanDemo.Core.Handlers
             if (!IsValid)
                 return null;
 
-            var cardOld = _cardRepository.GetNotRemovedCardById(command.Id).FirstOrDefault();
+            var cardOld = await _cardRepository.GetNotRemovedCardByIdAsync(command.Id);
 
             if (cardOld is null)
                 return null;
@@ -70,7 +70,7 @@ namespace KanbanDemo.Core.Handlers
                 return null;
             }
 
-            var card = _cardRepository.GetNotRemovedCardById(id).FirstOrDefault();
+            var card = await _cardRepository.GetNotRemovedCardByIdAsync(id);
 
             if (card is null)
                 return null;
@@ -82,8 +82,7 @@ namespace KanbanDemo.Core.Handlers
             return cards;
         }
 
-
-        public async Task<List<CardResult>> GetCards()
+        public async Task<List<CardResult>> GetCardsAsync()
         {
             var cards = await GetAllCardsAsync();
 
@@ -92,7 +91,7 @@ namespace KanbanDemo.Core.Handlers
 
         private async Task<List<CardResult>> GetAllCardsAsync()
         {
-            var cards = _cardRepository.GetNotRemovedCards();
+            var cards = await _cardRepository.GetNotRemovedCardsAsync();
 
             var cardResultList = cards.Select(x => new CardResult
             {
@@ -102,7 +101,7 @@ namespace KanbanDemo.Core.Handlers
                 Titulo = x.Titulo
             });
 
-            return await cardResultList.ToListAsync();
+            return cardResultList.ToList();
         }
     }
 }

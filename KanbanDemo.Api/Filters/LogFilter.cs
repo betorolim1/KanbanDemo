@@ -43,7 +43,7 @@ namespace KanbanDemo.API.Filters
             Card card = null;
 
             if (actionName == ACTION_ALTERAR)
-                card = _cardRepository.GetNotRemovedCardById(new Guid(id)).FirstOrDefault();
+                card = _cardRepository.GetNotRemovedCardByIdAsync(new Guid(id)).FirstOrDefault();
 
             if (actionName == ACTION_REMOVER)
                 card = _cardRepository.GetCardById(new Guid(id)).FirstOrDefault();

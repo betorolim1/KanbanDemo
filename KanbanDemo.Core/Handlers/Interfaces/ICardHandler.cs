@@ -12,6 +12,6 @@ namespace KanbanDemo.Core.Handlers.Interfaces
         Task<List<CardResult>> InsertCardAsync(InsertCardCommand command);
         Task<CardResult> UpdateCardAsync(UpdateCardCommand command);
         Task<List<CardResult>> DeleteCardAsync(Guid id);
-        Task<List<CardResult>> GetCards();
+        Task<List<CardResult>> GetCardsAsync();
     }
 }

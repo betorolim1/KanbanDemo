@@ -2,7 +2,9 @@
 using KanbanDemo.Core.Domains.Cards.Repository;
 using KanbanDemo.Data.Context;
 using KanbanDemo.Model.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,14 +19,14 @@ namespace KanbanDemo.Data.Repository
             _databaseContext = databaseContext;
         }
 
-        public IQueryable<Card> GetNotRemovedCards()
+        public async Task<List<Card>> GetNotRemovedCardsAsync()
         {
-            return _databaseContext.Cards.Where(x => !x.IsRemoved);
+            return await _databaseContext.Cards.Where(x => !x.IsRemoved).ToListAsync();
         }
 
-        public IQueryable<Card> GetNotRemovedCardById(Guid id)
+        public async Task<Card> GetNotRemovedCardByIdAsync(Guid id)
         {
-            return _databaseContext.Cards.Where(x => x.Id == id && !x.IsRemoved);
+            return await _databaseContext.Cards.Where(x => x.Id == id && !x.IsRemoved).FirstOrDefaultAsync();
         }
 
         public IQueryable<Card> GetCardById(Guid id)

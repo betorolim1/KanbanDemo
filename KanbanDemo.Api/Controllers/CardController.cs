@@ -71,7 +71,7 @@ namespace KanbanDemo.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCardsAsync()
         {
-            var result = await _cardHandler.GetCards();
+            var result = await _cardHandler.GetCardsAsync();
 
             return Ok(result);
         }

@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KanbanDemo.Data", "KanbanDe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KanbanDemo.Model", "KanbanDemo.Model\KanbanDemo.Model.csproj", "{EB9EA330-4975-4927-B34B-837D7617AAA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanDemo.API.Test", "KanbanDemo.API.Test\KanbanDemo.API.Test.csproj", "{0A042541-E570-4879-80C0-DBE3636AA6AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanDemo.Test.Shared", "KanbanDemo.Test.Shared\KanbanDemo.Test.Shared.csproj", "{5DC3A1AB-9D7B-4ADB-8EF3-CDA723C0AC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanbanDemo.Core.Test", "KanbanDemo.Core.Test\KanbanDemo.Core.Test.csproj", "{1248392C-D05D-41AF-B6E4-0EFC0C4DA126}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{EB9EA330-4975-4927-B34B-837D7617AAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9EA330-4975-4927-B34B-837D7617AAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9EA330-4975-4927-B34B-837D7617AAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A042541-E570-4879-80C0-DBE3636AA6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A042541-E570-4879-80C0-DBE3636AA6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A042541-E570-4879-80C0-DBE3636AA6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A042541-E570-4879-80C0-DBE3636AA6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC3A1AB-9D7B-4ADB-8EF3-CDA723C0AC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC3A1AB-9D7B-4ADB-8EF3-CDA723C0AC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC3A1AB-9D7B-4ADB-8EF3-CDA723C0AC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC3A1AB-9D7B-4ADB-8EF3-CDA723C0AC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1248392C-D05D-41AF-B6E4-0EFC0C4DA126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1248392C-D05D-41AF-B6E4-0EFC0C4DA126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1248392C-D05D-41AF-B6E4-0EFC0C4DA126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1248392C-D05D-41AF-B6E4-0EFC0C4DA126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
