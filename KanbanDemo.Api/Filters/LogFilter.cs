@@ -1,10 +1,8 @@
 ﻿using KanbanDemo.Core.Domains.Cards.Repository;
 using KanbanDemo.Model.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace KanbanDemo.API.Filters
 {
@@ -43,7 +41,7 @@ namespace KanbanDemo.API.Filters
             Card card = null;
 
             if (actionName == ACTION_ALTERAR)
-                card = _cardRepository.GetNotRemovedCardByIdAsync(new Guid(id)).FirstOrDefault();
+                card = _cardRepository.GetNotRemovedCardById(new Guid(id));
 
             if (actionName == ACTION_REMOVER)
                 card = _cardRepository.GetCardById(new Guid(id)).FirstOrDefault();

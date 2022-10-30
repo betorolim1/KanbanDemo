@@ -29,6 +29,11 @@ namespace KanbanDemo.Data.Repository
             return await _databaseContext.Cards.Where(x => x.Id == id && !x.IsRemoved).FirstOrDefaultAsync();
         }
 
+        public Card GetNotRemovedCardById(Guid id)
+        {
+            return _databaseContext.Cards.Where(x => x.Id == id && !x.IsRemoved).FirstOrDefault();
+        }
+
         public IQueryable<Card> GetCardById(Guid id)
         {
             return _databaseContext.Cards.Where(x => x.Id == id);

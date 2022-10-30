@@ -12,6 +12,7 @@ namespace KanbanDemo.Core.Domains.Cards.Repository
         Task<List<Card>> GetNotRemovedCardsAsync();
         Task<Card> UpdateCardAsync(Card cardOld, CardDomain cardDomainNew);
         Task<Card> GetNotRemovedCardByIdAsync(Guid id);
+        Card GetNotRemovedCardById(Guid id);
         Task DeleteCardAsync(Card card);
         IQueryable<Card> GetCardById(Guid id);
     }

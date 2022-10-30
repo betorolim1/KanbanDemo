@@ -145,10 +145,82 @@ namespace KanbanDemo.Core.Test.Handlers
         [Fact]
         public async Task DeleteCardAsync_Should_Notify_When_Id_Is_Empty()
         {
+            var result = await _handler.DeleteCardAsync(new Guid());
+
+            Assert.Null(result);
+            Assert.False(_handler.IsValid);
+            Assert.Contains(_handler.Notifications, x => x == "Id inválido.");
+
+            VerifyMocks();
+        }
+
+        [Fact]
+        public async Task DeleteCardAsync_Should_Return_Null_When_Card_Is_Not_Found()
+        {
             var id = _fixture.Create<Guid>();
+
+            _cardRepository.Setup(x => x.GetNotRemovedCardByIdAsync(id));
 
             var result = await _handler.DeleteCardAsync(id);
 
+            Assert.Null(result);
+            Assert.True(_handler.IsValid);
+
+            VerifyMocks();
+        }
+
+        [Fact]
+        public async Task DeleteCardAsync_Should_Delete_Card_And_Return_All_Cards()
+        {
+            var id = _fixture.Create<Guid>();
+
+            var card = _fixture.Create<Card>();
+
+            var cards = _fixture.CreateMany<Card>(10);
+
+            _cardRepository.Setup(x => x.GetNotRemovedCardByIdAsync(id)).ReturnsAsync(card);
+
+            _cardRepository.Setup(x => x.DeleteCardAsync(card));
+
+            _cardRepository.Setup(x => x.GetNotRemovedCardsAsync()).ReturnsAsync(cards.ToList());
+
+            var result = await _handler.DeleteCardAsync(id);
+
+            Assert.NotNull(result);
+            Assert.True(_handler.IsValid);
+            Assert.Empty(_handler.Notifications);
+
+            Assert.Equal(cards.Count(), result.Count);
+            Assert.Equal(cards.FirstOrDefault().Conteudo, result.FirstOrDefault().Conteudo);
+            Assert.Equal(cards.FirstOrDefault().Id, result.FirstOrDefault().Id);
+            Assert.Equal(cards.FirstOrDefault().Lista, result.FirstOrDefault().Lista);
+            Assert.Equal(cards.FirstOrDefault().Titulo, result.FirstOrDefault().Titulo);
+
+            VerifyMocks();
+        }
+
+        // GetCardsAsync
+
+        [Fact]
+        public async Task GetCardsAsync_Should_Return_All_Cards()
+        {
+            var cards = _fixture.CreateMany<Card>(10);
+
+            _cardRepository.Setup(x => x.GetNotRemovedCardsAsync()).ReturnsAsync(cards.ToList());
+
+            var result = await _handler.GetCardsAsync();
+
+            Assert.NotNull(result);
+            Assert.True(_handler.IsValid);
+            Assert.Empty(_handler.Notifications);
+
+            Assert.Equal(cards.Count(), result.Count);
+            Assert.Equal(cards.FirstOrDefault().Conteudo, result.FirstOrDefault().Conteudo);
+            Assert.Equal(cards.FirstOrDefault().Id, result.FirstOrDefault().Id);
+            Assert.Equal(cards.FirstOrDefault().Lista, result.FirstOrDefault().Lista);
+            Assert.Equal(cards.FirstOrDefault().Titulo, result.FirstOrDefault().Titulo);
+
+            VerifyMocks();
         }
 
         private void VerifyMocks()
