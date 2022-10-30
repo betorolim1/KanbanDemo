@@ -25,3 +25,10 @@ Altera o card informado no id e retorna este card alterado.
 
 (DELETE)    http:/5000/cards/{id}
 Remove o card informado no id e retorna uma lista de cards com todos os dados.
+
+
+# Obs:
+O LogFilter sempre loga o card mesmo este tendo sido deletado anteriormente, foi uma forma que encontrei de deixar o recurdo de deleção logando o titulo.
+
+Os métodos assíncronos do repositório poderiam retornar um IQuerable para mais filtros poderem ser incluidos futuramente, caso necessário. Mas por uma 
+dificuldade em "Mockar" métodos como ToListAsync() e FirstOrDefaultAsync(), optei por deixá-los retornando uma lista.
